@@ -1,0 +1,14 @@
+1. gcc process_monitor.c -o process_monitor
+Compiled the C program into an executable named process_monitor.
+
+2. ./process_monitor
+Executed the program to create child processes, monitor them, terminate the unresponsive child using SIGKILL, and prevent zombie processes using waitpid().
+
+3. ./process_monitor > outputs/output.txt
+Redirected the program output into a file for documentation.
+
+4. cat outputs/output.txt
+Displayed the saved program output for verification.
+
+Concept Explanation:
+The fork() system call creates child processes. The parent process monitors their execution. If a child process becomes unresponsive, the parent sends the SIGKILL signal to terminate it. Finally, waitpid() is used to collect the terminated child processes, preventing zombie processes from remaining in the system.

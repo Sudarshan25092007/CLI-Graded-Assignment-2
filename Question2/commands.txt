@@ -1,0 +1,7 @@
+gcc process_monitor.c -o process_monitor
+
+./process_monitor
+
+./process_monitor > outputs/output.txt
+
+cat outputs/output.txt
