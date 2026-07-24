@@ -1,0 +1,16 @@
+mkdir backup submissions outputs screenshots
+mkdir submissions/student1 submissions/student2 submissions/student3 submissions/student4
+
+echo "Assignment by Alice" > submissions/student1/assignment.txt
+echo "Assignment by Bob" > submissions/student2/assignment.txt
+cp submissions/student2/assignment.txt submissions/student3/assignment.txt
+echo "Assignment by David" > submissions/student4/assignment.txt
+
+find submissions -type f -exec md5sum {} \;
+
+chmod +x backup_submissions.sh
+./backup_submissions.sh
+
+cat report.txt
+ls backup
+cat errors.log
