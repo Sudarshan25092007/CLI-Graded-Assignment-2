@@ -1,0 +1,4 @@
+ERROR Disk space low
+ERROR Database connection failed
+ERROR Memory allocation failed
+ERROR Authentication failed

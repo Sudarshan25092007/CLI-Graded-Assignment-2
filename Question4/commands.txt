@@ -1,0 +1,16 @@
+cat > server.log << EOF
+INFO Server started
+INFO User logged in
+ERROR Disk space low
+INFO Connection established
+ERROR Database connection failed
+EOF
+
+tail -f server.log | grep --line-buffered "ERROR" | tee -a error_report.txt >/dev/null
+
+echo "INFO New request received" >> server.log
+echo "ERROR Memory allocation failed" >> server.log
+echo "INFO Request completed" >> server.log
+echo "ERROR Authentication failed" >> server.log
+
+cat error_report.txt

@@ -1,0 +1,13 @@
+1. Created a sample server log file containing INFO and ERROR messages.
+
+2. Used tail -f to continuously monitor new log entries in real time.
+
+3. Used grep to filter only ERROR messages from the incoming log stream.
+
+4. Redirected the filtered ERROR messages into error_report.txt.
+
+5. Redirected unnecessary error output to /dev/null to keep the terminal clean.
+
+Concept Explanation:
+
+The pipe (|) sends the output of tail directly to grep without creating intermediate files. The grep command filters only ERROR messages. The >> operator appends these messages to the report file. The 2>/dev/null redirection suppresses unwanted error messages, making the monitoring process efficient and clean.
