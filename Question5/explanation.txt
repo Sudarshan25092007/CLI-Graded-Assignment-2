@@ -1,0 +1,3 @@
+The vi -r command recovers a file using the swap file created by the vi editor after an unexpected crash.
+
+Swap files preserve unsaved work, backup files retain the last saved version, undo history allows reverting recent edits, and registers temporarily store copied or deleted text. Using swap files together with backup files provides the most reliable recovery strategy.
