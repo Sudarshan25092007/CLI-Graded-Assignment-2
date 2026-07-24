@@ -1,0 +1,19 @@
+1. gcc employee_records.c -o employee_records
+
+Compiled the C program using GCC to create the executable.
+
+2. ./employee_records
+
+Executed the program to create the employee data file, write records, update a specific record using lseek(), and read all records.
+
+3. ./employee_records > outputs/output.txt
+
+Redirected the program output into a file for documentation.
+
+4. cat outputs/output.txt
+
+Displayed the saved output.
+
+Concept Explanation:
+
+The open() system call creates and opens the employee data file. The write() system call stores employee records into the file. The lseek() system call moves the file pointer directly to the desired record, allowing updates without rewriting the entire file. The read() system call retrieves records efficiently, and close() safely closes the file after processing.
